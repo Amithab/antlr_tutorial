@@ -1,0 +1,23 @@
+{
+    "name": "custom-monaco-editor",
+    "version": "0.0.1",
+    "author": "AA",
+    "license": "Apache-2.0",
+    "repository": "",
+    "dependencies": {
+        "antlr4ts": "^0.5.0-alpha.3",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    },
+    "devDependencies": {
+        "antlr4ts-cli": "^0.5.0-alpha.3",
+        "mocha": "^8.1.1",
+        "monaco-editor": "^0.20.0",
+        "typescript": "^3.9.7"
+    },
+    "scripts": {
+        "test": "mocha 'src/test/**/*.js'",
+        "antlr4ts": "antlr4ts CustomLexer.g4 -o gen && antlr4ts -o gen -lib gen -visitor CustomParser.g4",
+        "ant": "antlr4ts Custom.g4 -visitor -o gen"
+    }
+}
